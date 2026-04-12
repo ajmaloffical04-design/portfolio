@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajmal - Portfolio</title>
+    <meta name="description" content="Ajmal - Sleek and professionally designed portfolio showcasing work and services intuitively.">
+    <!-- Google Fonts: Cormorant Garamond for Serif, Inter for Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+    
+    <!-- Background Elements -->
+    <div class="bg-layer">
+        <div class="grain-overlay"></div>
+        <img src="assets/sphere.png" alt="" class="bg-sphere sphere-1">
+    </div>
+
+    <!-- Header / Status -->
+    <header class="top-header">
+        <div class="logo">
+            <a href="#hero">
+                <img src="https://framerusercontent.com/images/sPPHSwPm8PcznT4iR4cTsWGIKug.png" alt="Ajmal Logo" class="logo-image" onerror="this.src=''; this.alt='Ajmal';">
+            </a>
+        </div>
+        <div class="status-badge-container">
+            <span class="status-badge"><span class="dot pulse"></span> available for work</span>
+        </div>
+    </header>
+
+    <!-- Bottom Navigation Pill -->
+    <nav class="bottom-nav">
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <div class="profile-img-container">
+                    <img src="https://framerusercontent.com/images/Gltht59rWssnnZ97SZ5MFDRrLQU.png" alt="Ajmal Profile" class="profile-img">
+                </div>
+                <h1 class="hero-title gsap-reveal">
+                    I design and develop <span class="oval-img"><img src="https://framerusercontent.com/images/r1b0fpV66ZbhLtg9weGKBndJvQ.jpeg" alt=""></span> <span class="serif-italic">conversion-focused</span> websites and e-commerce platforms, partnering with leading brands.
+                </h1>
+                <div class="hero-actions gsap-reveal">
+                    <a href="#contact" class="btn primary-btn large">Get In Touch Today <span class="arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="section-header gsap-reveal">
+                <h2 class="serif-title">My Projects</h2>
+                <a href="#projects" class="see-all">See All →</a>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card gsap-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="https://framerusercontent.com/images/r1b0fpV66ZbhLtg9weGKBndJvQ.jpeg" alt="Regal avenue">
+                    </div>
+                    <div class="project-info">
+                        <h3>Regal avenue</h3>
+                        <span class="arrow">↗</span>
+                    </div>
+                </div>
+
+                <div class="project-card gsap-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="https://framerusercontent.com/images/blneOZTIaahSaXuQgG6poADuvc.jpg" alt="Portfolite">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolite</h3>
+                        <span class="arrow">↗</span>
+                    </div>
+                </div>
+
+                <div class="project-card gsap-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="https://framerusercontent.com/images/XWYLDGpI7smDl808cUlAW6vcro.jpeg" alt="Fade">
+                    </div>
+                    <div class="project-info">
+                        <h3>Fade</h3>
+                        <span class="arrow">↗</span>
+                    </div>
+                </div>
+                
+                 <div class="project-card gsap-reveal">
+                    <div class="project-img-wrapper">
+                        <img src="https://framerusercontent.com/images/p6Im6dfknHAI0ig4NqDcO4WNpc.jpg" alt="E-commerce">
+                    </div>
+                    <div class="project-info">
+                        <h3>Trendify</h3>
+                        <span class="arrow">↗</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Marquee/Skills Section -->
+        <section class="skills marquee-section">
+            <h2 class="section-subtitle gsap-reveal">Skills & Expertise</h2>
+            <h3 class="gsap-reveal marquee-title serif-title">The knowledge that powers my designs</h3>
+            
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <div class="marquee-item">UX</div>
+                    <div class="marquee-item">UI</div>
+                    <div class="marquee-item">Shopify</div>
+                    <div class="marquee-item">Wordpress</div>
+                    <div class="marquee-item">Shopify Developer</div>
+                    <div class="marquee-item">UX/UI Designer</div>
+                    <div class="marquee-item">Freelance</div>
+                    <!-- Duplicate for infinite loop -->
+                    <div class="marquee-item">UX</div>
+                    <div class="marquee-item">UI</div>
+                    <div class="marquee-item">Shopify</div>
+                    <div class="marquee-item">Wordpress</div>
+                    <div class="marquee-item">Shopify Developer</div>
+                    <div class="marquee-item">UX/UI Designer</div>
+                    <div class="marquee-item">Freelance</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Banner -->
+        <section class="banner gsap-reveal">
+             <h2 class="serif-title">Tell Me About Your Next Creative Project</h2>
+             <a href="#contact" class="btn primary-btn inverse-btn">Get In Touch Today <span class="arrow">→</span></a>
+        </section>
+
+        <!-- Process Section -->
+        <section id="process" class="process">
+            <h2 class="section-subtitle gsap-reveal">Process</h2>
+            <h3 class="gsap-reveal mb-lg serif-title">The strategy behind exceptional results</h3>
+            
+            <div class="process-steps">
+                <div class="step gsap-reveal">
+                    <div class="step-num">001</div>
+                    <div class="step-content">
+                        <h4>Let's Get In Touch</h4>
+                        <p>Start by reaching out through our contact page. Fill out the form or book a call to discuss your project, goals, and ideas in even greater detail.</p>
+                    </div>
+                </div>
+                
+                <div class="step gsap-reveal">
+                    <div class="step-num">002</div>
+                    <div class="step-content">
+                        <h4>Grab Your Designs</h4>
+                        <p>Tell me your unique vision, and I’ll create stunning, functional designs that perfectly align with your goals and bring your ideas to life seamlessly.</p>
+                    </div>
+                </div>
+
+                <div class="step gsap-reveal">
+                    <div class="step-num">003</div>
+                    <div class="step-content">
+                        <h4>Kickstart Development</h4>
+                        <p>I expertly transform your designs into a powerful, scalable solution, fully ready to launch and optimized for performance, usability, and growth.</p>
+                    </div>
+                </div>
+
+                <div class="step gsap-reveal">
+                    <div class="step-num">004</div>
+                    <div class="step-content">
+                        <h4>And Hand Over</h4>
+                        <p>Receive a fully tested, polished, high-quality product tailored to your needs with support for seamless performance and long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+             <div class="services-header gsap-reveal">
+                 <h2 class="serif-title">Services</h2>
+             </div>
+             <div class="services-list">
+                 <div class="service-item gsap-reveal"><h3>Product Design</h3> <span class="arrow">↗</span></div>
+                 <div class="service-item gsap-reveal"><h3>UX Design</h3> <span class="arrow">↗</span></div>
+                 <div class="service-item gsap-reveal"><h3>UI Design</h3> <span class="arrow">↗</span></div>
+                 <div class="service-item gsap-reveal"><h3>Framer</h3> <span class="arrow">↗</span></div>
+                 <div class="service-item gsap-reveal"><h3>Branding</h3> <span class="arrow">↗</span></div>
+                 <div class="service-item gsap-reveal"><h3>Webflow</h3> <span class="arrow">↗</span></div>
+             </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <h2 class="section-subtitle gsap-reveal">Happy Clients</h2>
+            <div class="testimonial-cards">
+                <div class="testimonial-card gsap-reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"From concept to execution, the designs exceeded our expectations in every way. They are stunning, user-friendly, and strategically crafted for engagement and conversions."</p>
+                    <div class="client-info">
+                        <strong>Chasli Thompson</strong>
+                        <span>Vertex Technologies</span>
+                    </div>
+                </div>
+                <div class="testimonial-card gsap-reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Exceptional design skills! The sleek, sophisticated visuals instantly elevated our brand. The designs make a lasting impact and set us apart from the competition effortlessly."</p>
+                    <div class="client-info">
+                        <strong>Sarah Mitchell</strong>
+                        <span>Prime Realty</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-wrapper gsap-reveal">
+                <div class="contact-info">
+                    <h2 class="serif-title">Reach out and let’s bring your vision to life</h2>
+                    <p>contact@ajmal.work</p>
+                    <p>Reply within 24 hrs</p>
+                    <div class="contact-badge"><span class="dot pulse"></span> AVAILABLE</div>
+                    
+                    <div class="book-call">
+                        <span>Prefer to Book a call?</span>
+                        <a href="#" class="inline-link">Book a call anytime →</a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="url" placeholder="Website (optional)">
+                        <select>
+                            <option value="">Select Budget</option>
+                            <option value="small">$1k - $5k</option>
+                            <option value="medium">$5k - $10k</option>
+                            <option value="large">$10k+</option>
+                        </select>
+                        <textarea placeholder="How may we assist you?" required></textarea>
+                        <button type="submit" class="btn primary-btn submit-btn">Send Your Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <h2 class="serif-title">Ajmal</h2>
+            <p>Discover the perfect design approach tailored to your needs, blending creativity, innovation, versatility, detail, and functionality seamlessly</p>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Ajmal All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- GSAP & Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
