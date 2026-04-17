@@ -1,18 +1,18 @@
 /* --- GLOBALS & VARIABLES --- */
 :root {
-    --bg-main: #fcfcf9;
+    --bg-main: #fcfcfc;
     --bg-secondary: #f4f4f1;
-    --text-primary: #1a1a1a;
+    --text-primary: #111111;
     --text-secondary: #666666;
     --accent-color: #000000;
     --border-subtle: rgba(0, 0, 0, 0.05);
     --border-medium: rgba(0, 0, 0, 0.1);
-    --card-bg: #ffffff;
+    --card-bg: #f5f5f5;
     --glass-bg: rgba(255, 255, 255, 0.7);
     --glass-border: rgba(255, 255, 255, 0.5);
     
     --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-serif: 'Cormorant Garamond', serif;
+    --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Simplified, remove serif */
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     
     --transition-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -352,23 +352,29 @@ h1, h2, h3, h4 {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 4rem;
+    grid-template-columns: 1fr; /* Single column */
+    gap: 6rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 40px;
+    transition: var(--transition-smooth);
 }
 
 .project-img-wrapper {
     position: relative;
     width: 100%;
-    aspect-ratio: 4/5;
-    border-radius: 1.5rem;
+    aspect-ratio: 16/10;
+    border-radius: 24px;
     overflow: hidden;
-    background: var(--bg-secondary);
+    background: #e0e0e0;
 }
 
 .project-img-wrapper img {
@@ -379,18 +385,20 @@ h1, h2, h3, h4 {
 }
 
 .project-card:hover .project-img-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .project-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .project-info h3 {
-    font-size: 1.8rem;
-    font-family: var(--font-serif);
+    font-size: 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
 }
 
 /* --- MARQUEE --- */
@@ -438,43 +446,53 @@ h1, h2, h3, h4 {
     100% { transform: translateX(-50%); }
 }
 
-/* --- PROCESS --- */
+/* --- PROCESS & SERVICES --- */
 .process {
     padding: 10rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .process-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 4rem;
 }
 
 .step {
     padding: 3rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border-subtle);
-    border-radius: 1.5rem;
+    background: transparent;
+    border-bottom: 1px solid var(--border-medium);
+    border-radius: 0;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 4rem;
     transition: var(--transition-smooth);
 }
 
 .step:hover {
-    border-color: var(--text-primary);
-    transform: translateY(-10px);
+    transform: none;
+    background: rgba(0,0,0,0.02);
 }
 
 .step-num {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-secondary);
+    min-width: 50px;
 }
 
-.step h4 {
-    font-size: 1.6rem;
+.step-content h4 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.step-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
 }
 
 /* --- SERVICES --- */
@@ -516,42 +534,64 @@ h1, h2, h3, h4 {
 
 /* --- CONTACT --- */
 .contact {
-    padding: 10rem 5%;
+    padding: 15rem 5% 10rem;
 }
 
-.contact-wrapper {
+.contact-minimal {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.contact-minimal h2 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.huge-email {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
+    position: relative;
+}
+
+.huge-email::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 4px;
     background: var(--text-primary);
-    color: #fff;
-    border-radius: 2.5rem;
-    padding: 6rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.contact-info .serif-title {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    margin-bottom: 2rem;
+.huge-email:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
-.contact-form input, 
-.contact-form select, 
-.contact-form textarea {
-    width: 100%;
-    padding: 1.5rem;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 1rem;
-    color: #fff;
-    margin-bottom: 1.5rem;
-    font-family: inherit;
-    font-size: 1rem;
-}
-
-.submit-btn {
-    width: 100%;
-    padding: 1.5rem;
-    font-size: 1.1rem;
+.contact-badge-minimal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
 }
 
 /* --- FOOTER --- */

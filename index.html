@@ -15,9 +15,7 @@
     <div class="custom-cursor"></div>
     
     <!-- Background Elements -->
-    <div class="bg-layer">
-        <div class="grain-overlay"></div>
-        <img src="assets/sphere.png" alt="" class="bg-sphere sphere-1">
+    <div class="bg-layer" style="display:none;">
     </div>
 
     <!-- Header / Status -->
@@ -142,8 +140,7 @@
         
         <!-- Call to Action Banner -->
         <section class="banner gsap-reveal">
-             <h2 class="serif-title">Tell Me About Your Next Creative Project</h2>
-             <a href="#contact" class="btn primary-btn inverse-btn">Get In Touch Today <span class="arrow">→</span></a>
+             <!-- Removed banner elements for minimalism -->
         </section>
 
         <!-- Process Section -->
@@ -226,33 +223,10 @@
 
         <!-- Contact Section -->
         <section id="contact" class="contact">
-            <div class="contact-wrapper gsap-reveal">
-                <div class="contact-info">
-                    <h2 class="serif-title">Reach out and let’s bring your vision to life</h2>
-                    <p>contact@ajmal.work</p>
-                    <p>Reply within 24 hrs</p>
-                    <div class="contact-badge"><span class="dot pulse"></span> AVAILABLE</div>
-                    
-                    <div class="book-call">
-                        <span>Prefer to Book a call?</span>
-                        <a href="#" class="inline-link">Book a call anytime →</a>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form>
-                        <input type="text" placeholder="Full Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <input type="url" placeholder="Website (optional)">
-                        <select>
-                            <option value="">Select Budget</option>
-                            <option value="small">$1k - $5k</option>
-                            <option value="medium">$5k - $10k</option>
-                            <option value="large">$10k+</option>
-                        </select>
-                        <textarea placeholder="How may we assist you?" required></textarea>
-                        <button type="submit" class="btn primary-btn submit-btn">Send Your Message</button>
-                    </form>
-                </div>
+            <div class="contact-minimal gsap-reveal">
+                <h2>Let's build something great.</h2>
+                <a href="mailto:contact@ajmal.work" class="huge-email">contact@ajmal.work</a>
+                <div class="contact-badge-minimal"><span class="dot pulse"></span> AVAILABLE FOR WORK</div>
             </div>
         </section>
     </main>
